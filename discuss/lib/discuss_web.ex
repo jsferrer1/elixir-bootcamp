@@ -32,8 +32,10 @@ defmodule DiscussWeb do
       use Phoenix.Controller, namespace: DiscussWeb
 
       import Plug.Conn
+      import DiscussWeb.Router.Helpers
       import DiscussWeb.Gettext
-      alias DiscussWeb.Router.Helpers, as: Routes
+      #alias DiscussWeb.Router.Helpers, as: Routes
+      alias Discuss.Repo
     end
   end
 
@@ -78,6 +80,7 @@ defmodule DiscussWeb do
 
       import DiscussWeb.ErrorHelpers
       import DiscussWeb.Gettext
+      import DiscussWeb.Router.Helpers
       alias DiscussWeb.Router.Helpers, as: Routes
     end
   end
